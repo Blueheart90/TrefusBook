@@ -10,7 +10,11 @@ class Item extends Model
     /** @use HasFactory<\Database\Factories\ItemFactory> */
     use HasFactory;
 
+    public $incrementing = false;
+    protected $keyType = 'integer';
+
     protected $fillable = [
+        'id',
         'official_id',
         'name',
         'information',

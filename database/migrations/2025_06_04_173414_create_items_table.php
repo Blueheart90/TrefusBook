@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('items', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedBigInteger('id')->primary();
             $table->unsignedBigInteger('official_id')->unique(); // ID oficial del juego
             $table->string('name');
             $table->text('information')->nullable();
@@ -45,7 +45,7 @@ return new class extends Migration {
             $table->string('png_color2')->nullable();
             $table->string('png_color3')->nullable();
             $table->string('size')->nullable();
-            $table->boolean('cameleon')->default(false);
+            $table->boolean('cameleon')->nullable();
 
             $table->timestamps();
 

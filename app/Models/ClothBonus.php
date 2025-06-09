@@ -4,14 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class ItemEffect extends Model
+class ClothBonus extends Model
 {
     protected $fillable = [
-        'id',
-        'item_id',
+        'cloth_id',
         'effect_type_id',
-        'min_value',
-        'max_value',
+        'count',
+        'value',
         'emote',
         'title',
         'spell',

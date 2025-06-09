@@ -404,10 +404,16 @@ class EffectTypeSeeder extends Seeder
                 'display_name' => 'Daños aire fijo',
                 'type' => 'E',
             ],
+            [
+                'id' => 723,
+                'value' => 'at',
+                'display_name' => 'Actitud',
+                'type' => 'O',
+            ],
         ];
 
         foreach ($effectTypes as $effectType) {
-            EffectType::updateOrInsert(
+            EffectType::updateOrCreate(
                 ['id' => $effectType['id']],
                 $effectType
             );
