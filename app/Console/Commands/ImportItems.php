@@ -111,7 +111,7 @@ class ImportItems extends Command
                     if (!empty($item['effects'])) {
                         foreach ($item['effects'] as $effect) {
                             // verificar si el effect_type existe, si no , crearlo
-                            EffectType::updateOrCreate(
+                            EffectType::firstOrCreate(
                                 ['id' => $effect['id']],
                                 [
                                     'value' => $effect['name'],

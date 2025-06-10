@@ -13,6 +13,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([EffectTypeSeeder::class, CategorySeeder::class]);
+        $this->call([
+            EffectTypeSeeder::class,
+            CategorySeeder::class,
+            RaceSeeder::class,
+            StatTypeSeeder::class,
+            // El statCost se importa desde un archivo JSON
+            // StatCostSeeder::class,
+        ]);
     }
 }
