@@ -21,5 +21,8 @@ class DatabaseSeeder extends Seeder
             // El statCost se importa desde un archivo JSON
             // StatCostSeeder::class,
         ]);
+
+        //TODO: importar spells
+        //TODO: importar buffs
     }
 }

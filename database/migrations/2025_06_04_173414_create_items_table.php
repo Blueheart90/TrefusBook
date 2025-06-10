@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('items', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
-            $table->unsignedBigInteger('official_id')->unique(); // ID oficial del juego
+            $table->unsignedBigInteger('official_id'); // ID oficial del juego
             $table->string('name');
             $table->text('information')->nullable();
             $table->string('slug')->unique();

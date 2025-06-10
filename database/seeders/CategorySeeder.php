@@ -15,6 +15,66 @@ class CategorySeeder extends Seeder
     {
         $categories = [
             [
+                'id' => 2,
+                'value' => 'ba',
+                'name' => 'Varita',
+                'type' => 'W',
+            ],
+            [
+                'id' => 3,
+                'value' => 'bn',
+                'name' => 'Bastón',
+                'type' => 'W',
+            ],
+            [
+                'id' => 1,
+                'value' => 'ar',
+                'name' => 'Arco',
+                'type' => 'W',
+            ],
+            [
+                'id' => 4,
+                'value' => 'da',
+                'name' => 'Dagas',
+                'type' => 'W',
+            ],
+            [
+                'id' => 9,
+                'value' => 'pe',
+                'name' => 'Pala',
+                'type' => 'W',
+            ],
+            [
+                'id' => 8,
+                'value' => 'ma',
+                'name' => 'Martillo',
+                'type' => 'W',
+            ],
+            [
+                'id' => 10,
+                'value' => 'pi',
+                'name' => 'Pico',
+                'type' => 'W',
+            ],
+            [
+                'id' => 7,
+                'value' => 'ha',
+                'name' => 'Hacha',
+                'type' => 'W',
+            ],
+            [
+                'id' => 6,
+                'value' => 'fx',
+                'name' => 'Falso',
+                'type' => 'W',
+            ],
+            [
+                'id' => 5,
+                'value' => 'ep',
+                'name' => 'Espada',
+                'type' => 'W',
+            ],
+            [
                 'id' => 15,
                 'value' => 'ce',
                 'name' => 'Cinturón',
