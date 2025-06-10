@@ -7,6 +7,9 @@ use App\Models\EffectType;
 use App\Models\ItemEffect;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\File;
 
 class ImportItems extends Command
 {
@@ -62,6 +65,49 @@ class ImportItems extends Command
             return $this->fetchWithRetry($url, $attempt + 1);
         }
     }
+
+    /**
+     * Download and save item image
+     *
+     * @param string $picture
+     * @return void
+     */
+    private function downloadImage($picture)
+    {
+        $baseUrl = 'https://retro.dofusbook.net/static/dist/items/';
+        $imageUrl = $baseUrl . $picture . '-70.webp';
+        $imageName = $picture . '.webp';
+        $directory = 'assets/items';
+
+        // Skip if image already exists
+        if (Storage::disk('public')->exists($directory . '/' . $imageName)) {
+            return;
+        }
+
+        // Create directory if it doesn't exist
+        if (!Storage::disk('public')->exists($directory)) {
+            Storage::disk('public')->makeDirectory($directory, true);
+        }
+
+        try {
+            $image = file_get_contents($imageUrl);
+            if ($image !== false) {
+                Storage::disk('public')->put(
+                    $directory . '/' . $imageName,
+                    $image
+                );
+                $this->info('Downloaded image: ' . $imageName);
+            }
+        } catch (\Exception $e) {
+            $this->warn(
+                'Could not download image: ' .
+                    $imageUrl .
+                    ' - ' .
+                    $e->getMessage()
+            );
+        }
+    }
+
     public function handle()
     {
         $baseUrl =
@@ -81,6 +127,9 @@ class ImportItems extends Command
                     'data'
                 ];
                 foreach ($items as $item) {
+                    // Download the image first
+                    $this->downloadImage($item['picture']);
+
                     $itemDb = Item::updateOrCreate(
                         ['id' => $item['id']],
                         [
