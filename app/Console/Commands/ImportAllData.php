@@ -30,6 +30,10 @@ class ImportAllData extends Command
         $this->call('app:import-cloths');
         $this->newLine();
         $this->call('app:import-items');
+        $this->newLine();
+        $this->call('app:import-weapons');
+        $this->newLine();
+        $this->call('app:import-spells');
 
         $this->info('✅ Importación completada exitosamente!');
     }
