@@ -410,6 +410,54 @@ class EffectTypeSeeder extends Seeder
                 'display_name' => 'Actitud',
                 'type' => 'O',
             ],
+            [
+                'id' => 998,
+                'value' => 'pdvf',
+                'display_name' => 'Pdv devueltos Fuego',
+                'type' => 'C',
+            ],
+            [
+                'id' => 999,
+                'value' => 'pdv',
+                'display_name' => 'Pdv devueltos',
+                'type' => 'C',
+            ],
+            [
+                'id' => 1000,
+                'value' => 'gf',
+                'display_name' => 'Glifo Fuego',
+                'type' => 'D',
+            ],
+            [
+                'id' => 1001,
+                'value' => 'pou',
+                'display_name' => 'Daño Empuje',
+                'type' => 'D',
+            ],
+            [
+                'id' => 1002,
+                'value' => 'pit',
+                'display_name' => 'Trampa Tierra',
+                'type' => 'D',
+            ],
+            [
+                'id' => 1003,
+                'value' => 'dv',
+                'display_name' => 'Daños % de vida',
+                'type' => 'D',
+            ],
+            [
+                'id' => 1004,
+                'value' => 'pf',
+                'display_name' => 'Veneno Fuego',
+                'type' => 'D',
+            ],
+            [
+                'id' => 1005,
+                'value' => 'puni',
+                'display_name' => 'Castigo',
+                'type' => 'D',
+            ],
         ];
 
         foreach ($effectTypes as $effectType) {
