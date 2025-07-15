@@ -1,9 +1,10 @@
-<div>
-    <img
-        class="size-6 text-red-500"
-        src="{{ asset('storage/assets/stats/' . $icon . '.svg') }}"
-        alt="{{ $title }}"
-    />
-    <span>{{ $title }}</span>
-    <span>{{ $value }}</span>
+<div class="flex items-center gap-2">
+    <div class="bg-accent rounded-full p-1">
+        <x-dynamic-component
+            :component="'svgs.stats.' . $stat['icon']"
+            :class="'size-6 ' . $stat['color']"
+        />
+    </div>
+    <span>{{ $stat['title'] }}</span>
+    <span>{{ $stat['value'] }}</span>
 </div>

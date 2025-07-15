@@ -15,12 +15,7 @@
                 <li>Nivel</li>
                 <li>Nivel</li>
             </ol>
-            <livewire:equipment.stats.stats-list />
-            <livewire:equipment.stats.stat-item
-                title="Curas"
-                value="10"
-                icon="curas"
-            />
+            <livewire:equipment.stats.character-stats />
         </div>
         <div class="grid auto-rows-min gap-4 md:grid-cols-3">
             <div

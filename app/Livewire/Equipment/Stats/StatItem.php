@@ -7,9 +7,7 @@ use Illuminate\Support\Facades\Storage;
 
 class StatItem extends Component
 {
-    public $title;
-    public $value;
-    public $icon;
+    public $stat;
 
     public function render()
     {
