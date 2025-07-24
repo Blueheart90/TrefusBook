@@ -1,9 +1,9 @@
-<div>
-    <h3>Lista de estadísticas</h3>
-
-    <div class="flex flex-col gap-1">
-        @foreach ($stats as $stat)
-            <livewire:equipment.stats.stat-item :stat="$stat" />
-        @endforeach
-    </div>
-</div>
+<ul class="bg-base-100 border-base-300 space-y-1 rounded-lg border p-4">
+    <li>
+        <span>Nivel</span>
+        <x-mary-input type="number" name="nivel" id="nivel" min="1" max="200" />
+    </li>
+    @foreach ($stats as $stat)
+        <livewire:equipment.stats.stat-item :stat="$stat" />
+    @endforeach
+</ul>

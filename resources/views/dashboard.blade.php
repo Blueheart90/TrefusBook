@@ -1,22 +1,14 @@
 <x-layouts.app :title="__('Dashboard')">
     <div class="flex h-full w-full flex-1 flex-col gap-4 rounded-xl">
-        <div>
-            <ol>
-                <li>
-                    <span>Nivel</span>
-                    <input
-                        type="number"
-                        name="nivel"
-                        id="nivel"
-                        min="1"
-                        max="200"
-                    />
-                </li>
-                <li>Nivel</li>
-                <li>Nivel</li>
-            </ol>
+        <div class="grid grid-cols-4 items-center gap-4">
+            <livewire:equipment.stats.character-stats />
+
+            <div class="col-span-2 flex items-center justify-center">
+                <livewire:equipment.slots.character-slots />
+            </div>
             <livewire:equipment.stats.character-stats />
         </div>
+
         <div class="grid auto-rows-min gap-4 md:grid-cols-3">
             <div
                 class="relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700"

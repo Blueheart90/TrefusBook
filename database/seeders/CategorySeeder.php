@@ -170,6 +170,12 @@ class CategorySeeder extends Seeder
                 'name' => 'Vueloceronte',
                 'type' => 'E',
             ],
+            [
+                'id' => 27,
+                'value' => 'dom',
+                'name' => 'Dofus Omega',
+                'type' => 'E',
+            ],
         ];
 
         foreach ($categories as $category) {
