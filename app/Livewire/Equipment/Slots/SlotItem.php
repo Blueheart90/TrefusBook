@@ -8,7 +8,8 @@ class SlotItem extends Component
 {
     public $size;
     public $bgImage;
-    public $item;
+    public $category;
+    public $name;
     public $equipped;
 
     public function render()

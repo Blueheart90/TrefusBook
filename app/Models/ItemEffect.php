@@ -17,4 +17,9 @@ class ItemEffect extends Model
         'spell',
         'spell_description',
     ];
+
+    public function effectType()
+    {
+        return $this->belongsTo(EffectType::class);
+    }
 }

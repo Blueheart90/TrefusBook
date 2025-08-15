@@ -6,6 +6,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Amuleto']['img'] }}"
+                category="{{ $slots['Amuleto']['category'] }}"
+                name="{{ $slots['Amuleto']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -14,6 +16,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Escudo']['img'] }}"
+                category="{{ $slots['Escudo']['category'] }}"
+                name="{{ $slots['Escudo']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -22,6 +26,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Anillo']['img'] }}"
+                category="{{ $slots['Anillo']['category'] }}"
+                name="{{ $slots['Anillo']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -30,6 +36,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Cinturon']['img'] }}"
+                category="{{ $slots['Cinturon']['category'] }}"
+                name="{{ $slots['Cinturon']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -38,6 +46,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Botas']['img'] }}"
+                category="{{ $slots['Botas']['category'] }}"
+                name="{{ $slots['Botas']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -46,6 +56,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Prismarita']['img'] }}"
+                category="{{ $slots['Prismarita']['category'] }}"
+                name="{{ $slots['Prismarita']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -64,6 +76,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Dofus Dolmanax']['img'] }}"
+                category="{{ $slots['Dofus Dolmanax']['category'] }}"
+                name="{{ $slots['Dofus Dolmanax']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -72,6 +86,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Idolo']['img'] }}"
+                category="{{ $slots['Idolo']['category'] }}"
+                name="{{ $slots['Idolo']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -80,6 +96,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Dofus Omega']['img'] }}"
+                category="{{ $slots['Dofus Omega']['category'] }}"
+                name="{{ $slots['Dofus Omega']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -88,6 +106,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Arma']['img'] }}"
+                category="{{ $slots['Arma']['category'] }}"
+                name="{{ $slots['Arma']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -96,6 +116,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Sombrero']['img'] }}"
+                category="{{ $slots['Sombrero']['category'] }}"
+                name="{{ $slots['Sombrero']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -104,6 +126,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Capa']['img'] }}"
+                category="{{ $slots['Capa']['category'] }}"
+                name="{{ $slots['Capa']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -112,6 +136,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Mascota']['img'] }}"
+                category="{{ $slots['Mascota']['category'] }}"
+                name="{{ $slots['Mascota']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -120,6 +146,8 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Montura']['img'] }}"
+                category="{{ $slots['Montura']['category'] }}"
+                name="{{ $slots['Montura']['name'] }}"
                 item=""
                 equipped=""
             />
@@ -128,9 +156,12 @@
             <livewire:equipment.slots.slot-item
                 size="90"
                 bgImage="{{ $slots['Prismarita']['img'] }}"
+                category="{{ $slots['Prismarita']['category'] }}"
+                name="{{ $slots['Prismarita']['name'] }}"
                 item=""
                 equipped=""
             />
         </div>
     </div>
+    <livewire:equipment.slots.item-modal />
 </div>
